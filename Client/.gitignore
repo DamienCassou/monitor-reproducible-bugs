@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+.idea/
+/coverage/
+/babel/
+/build/
+/js/compare-kpi-external/example/*min.js*
+.tags
