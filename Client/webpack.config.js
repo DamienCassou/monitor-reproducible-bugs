@@ -21,6 +21,25 @@ const config = {
 			),
 		},
 	},
+	module: {
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['@babel/preset-env'],
+						plugins: [
+							// we could optionally insert this plugin
+							// only if the code coverage flag is on
+							'istanbul',
+						],
+					},
+				},
+            },
+        ]
+	},
 	watchOptions: {
 		// Ignore files whose name starts with '.#' because they are
 		// temporary lock files:
