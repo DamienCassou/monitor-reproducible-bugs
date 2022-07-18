@@ -3,7 +3,7 @@ const path = require("path");
 const config = {
 	entry: "./js/external_main.js",
 	mode: "development",
-	devtool: "cheap-eval-source-map",
+	devtool: "eval-cheap-source-map",
 	output: {
 		filename: "external.latest.js",
 		path: path.resolve(__dirname, "build"),
@@ -13,7 +13,7 @@ const config = {
 		alias: {
 			klassified: path.resolve(
 				__dirname,
-				"node_modules/klassified/dist/klassified"
+				"node_modules/klassified/src/klassified"
 			),
 			widgetjs: path.resolve(
 				__dirname,
@@ -24,7 +24,7 @@ const config = {
 	watchOptions: {
 		// Ignore files whose name starts with '.#' because they are
 		// temporary lock files:
-		ignored: [new RegExp("/\\.#")],
+		ignored: ["/\\.#"],
 	},
 };
 

@@ -1,4 +1,4 @@
-import { HelloWorldWidget } from "Widgets/HelloWorldWidget";
+import { HelloWorldWidget } from "HelloWorldWidget/HelloWorldWidget";
 
 const main = (animal) => {
 	jQuery("body");
